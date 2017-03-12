@@ -1,0 +1,20 @@
+{
+ "namespace": "com.etl.datamodel",
+ "type": "record",
+ "name": "ClickStreamRecord",
+ "fields": [
+     {"name": "atgId", "type": ["null","string"], "default": null },
+     {"name": "channel", "type": ["null","string"], "default": null },
+     {"name": "cookieId", "type": ["null","string"], "default": null },
+     {"name": "sessionId", "type": ["null","string"], "default": null },
+     {"name": "pageUrl", "type": ["null","string"], "default": null },
+     {"name": "timeStamp", "type": ["null","string"], "default": null },
+     {"name": "isoTime", "type": ["null","string"], "default": null },
+     {"name": "eventType", "type": ["null","string"], "default": null },
+     {"name": "experienceType", "type": ["null","string"], "default": null },
+     {"name": "productNumbers", "type": ["null","string"], "default": null },
+     {"name": "page", "type": ["null","string"], "default": null },
+     {"name": "placement", "type": ["null","string"], "default": null },
+     {"name": "productRank", "type": ["null","string"], "default": null }
+ ]
+}

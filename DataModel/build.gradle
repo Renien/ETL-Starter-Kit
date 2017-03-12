@@ -1,0 +1,50 @@
+apply plugin: "java"
+apply plugin: "com.commercehub.gradle.plugin.avro-base"
+
+ext {
+    avroTaskGroup = "Avro"
+    avroSource = "schema"
+    avroDest = "target/generated-sources/main/java"
+}
+
+dependencies {
+    compile([
+            libs.avro,
+            libs.avroCompiler
+    ])
+
+    testCompile([
+    ])
+}
+
+hadoopJar.enabled = false
+
+avro {
+    createSetters = false
+}
+
+task cleanAvro(type: Delete) {
+    group = avroTaskGroup
+    description = "Deletes the generated avro code"
+    delete avroDest
+}
+
+task generateAvro(type: com.commercehub.gradle.plugin.avro.GenerateAvroJavaTask) {
+    source(avroSource)
+    outputDir = file(avroDest)
+}
+
+compileJava.dependsOn = [cleanAvro, generateAvro]
+
+compileJava.source(avroDest)
+
+sourceSets {
+    main {
+        java {
+            srcDir avroDest
+        }
+        resources {
+            srcDir avroSource
+        }
+    }
+}
