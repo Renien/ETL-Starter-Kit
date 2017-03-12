@@ -1,5 +1,59 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.war
+*.ear
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Intellij generated files #
+############################
+*.iml
+*.ipr
+*.iws
+.idea/
+.DS_Store
+.classpath
+.project
+.cache
+.idea
+
+# Gradle generate files #
+#########################
 .gradle
-build/
+build
+bin
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -12,3 +66,23 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+# Java files #
+##############
+*.class
+
+# Scala #
+#########
+*.class
+*.log
+.scala_dependencies
+
+# Build Specific #
+################
+dist/*
+target/
+classes/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
