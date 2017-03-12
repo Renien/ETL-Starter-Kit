@@ -1,0 +1,9 @@
+ext {
+    repos = [:]
+}
+
+repos += [
+        cloudera:"http://conjars.org/repo/",
+        twitter:"http://maven.twttr.com/",
+        hortonworks: "http://repo.hortonworks.com/content/repositories/releases/"
+]

@@ -1,0 +1,24 @@
+ext {
+    versions = [:]
+    libs = [:]
+}
+versions += [
+        avro: "1.8.1",
+        scalding: "0.16.0",
+        scala: "2.10",
+        hadoop: "2.4.0.2.1.2.0-402",
+        elephantbird: "4.14"
+]
+
+libs += [
+        avro: "org.apache.avro:avro:$versions.avro",
+        avroCompiler: "org.apache.avro:avro-compiler:$versions.avro",
+        bijectionAvro: "com.twitter:bijection-avro_$versions.scala:0.7.2",
+        scalding_core: "com.twitter:scalding-core_$versions.scala:$versions.scalding",
+        scalding_avro: "com.twitter:scalding-avro_$versions.scala:$versions.scalding",
+        scalding_commons: "com.twitter:scalding-commons_$versions.scala:$versions.scalding",
+        scalding_jdbc: "com.twitter:scalding-jdbc_$versions.scala:$versions.scalding",
+        hadoopCommon: "org.apache.hadoop:hadoop-common:$versions.hadoop",
+        hadoopMapredClientCore: "org.apache.hadoop:hadoop-mapreduce-client-core:$versions.hadoop",
+        elephantbird: "com.twitter.elephantbird:elephant-bird-pig:$versions.elephantbird"
+]

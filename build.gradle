@@ -1,0 +1,28 @@
+buildscript { apply from: file('gradle/buildscript.gradle'), to: buildscript }
+
+allprojects {
+    apply plugin: 'com.github.ben-manes.versions'
+    apply from: "$rootDir/gradle/repositories.gradle"
+    apply from: "$rootDir/gradle/dependencies.gradle"
+    apply from: "$rootDir/gradle/artifacts.gradle"
+    apply plugin: "idea"
+
+    repositories {
+        maven { url repos.cloudera }
+        maven { url repos.twitter }
+        maven { url repos.hortonworks }
+        mavenCentral()
+        mavenLocal()
+
+    }
+}
+
+subprojects {
+
+    // Add Intellij provided scope support
+    idea {
+        module {
+            scopes.PROVIDED.plus += [configurations.providedCompile]
+        }
+    }
+}

@@ -1,0 +1,8 @@
+include 'Common'
+include 'DataModel'
+
+rootProject.children.each {
+    it.name = rootProject.name.toLowerCase() + "-" + it.name.toLowerCase()
+}
+
+
