@@ -1,7 +1,7 @@
 <h1 align="center">
-<img src="https://github.com/Renien/ETL/blob/master/doc/blob/ETL.png" alt="ETL" height="10%" width="10%">
+<img src="https://raw.githubusercontent.com/Renien/ETL/master/doc/blob/ELT.png" alt="ETL" height="10%" width="10%">
     <br>
-        kirke
+        ETL
     <br>
   <h4 align="center">Extract - Transform - Load</h4>
 </h1>
