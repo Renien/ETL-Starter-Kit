@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/Renien/ETL/master/doc/blob/ELT.png" alt="ETL" height="10%" width="10%">
+<img src="https://raw.githubusercontent.com/Renien/ETL/master/doc/blob/ELT.png" alt="ETL" width="20%" height="20%">
     <br>
         ETL
     <br>
