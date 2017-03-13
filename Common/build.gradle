@@ -1,0 +1,15 @@
+dependencies {
+    compile([
+            libs.scalding_core,
+            libs.scalding_avro,
+            libs.scalding_commons,
+            libs.hadoopCommon,
+            libs.hadoopMapredClientCore
+    ])
+
+    providedCompile([
+    ])
+
+    testCompile([
+    ])
+}
