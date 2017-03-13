@@ -7,6 +7,10 @@
 </h1>
 
 <p align="center">
+       <a href="https://travis-ci.org/Renien/ETL">
+           <img src="https://travis-ci.org/Renien/ETL.svg?branch=master"
+                alt="Travis Build">
+       </a>
        <a href="">
            <img src="https://img.shields.io/npm/l/express.svg?maxAge=2592000&style=flat-square"
                 alt="License">
