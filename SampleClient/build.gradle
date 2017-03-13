@@ -1,3 +1,6 @@
+apply from: "$rootDir/gradle/workflows.gradle"
+apply from: "$projectDir/workflow/flow.gradle"
+
 dependencies {
     compile([
             project(':etl-common'),

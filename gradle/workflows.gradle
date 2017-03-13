@@ -1,0 +1,42 @@
+loadConfiguration()
+apply plugin: "com.linkedin.gradle.hadoop.HadoopPlugin"
+
+ext {
+    hadoopRunnerClass = 'com.etl.utils.HadoopRunner'
+    azkabanLocation = 'build/azkaban'
+
+    //env variables
+    extClassDir = "$env.azkaban.extClassDir"
+    artifactsDir = "$env.azkaban.artifacts_dir"
+}
+
+def projectExtClassDir = "$extClassDir/$project.name/lib"
+def jobClasspath = "/etc/hadoop/conf,/usr/lib/hadoop/lib/*,/usr/lib/hadoop/client/*,./lib/*,$projectExtClassDir/*"
+
+propertySet('common') {
+    set properties: [
+            'classpath' : "$jobClasspath"
+    ]
+}
+
+task azkabanZips(type: Zip) {
+    def buildDir = "$buildDir/"
+    def azkabanSrc = "$buildDir/azkaban/"
+    def azkabanDist = "$buildDir/libs/"
+
+    from azkabanSrc
+    include '*/*.job'
+    destinationDir(file(azkabanDist))
+
+}
+azkabanZips.dependsOn buildAzkabanFlows
+build.dependsOn azkabanZips
+
+@SuppressWarnings("GroovyAssignabilityCheck")
+def loadConfiguration() {
+    def environment = hasProperty('env') ? env : 'dev'
+    def configFile = file("$rootDir/gradle/enviroments.groovy")
+    def env = new ConfigSlurper(environment).parse(configFile.toURL())
+    project.ext['env'] = env
+
+}

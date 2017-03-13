@@ -1,0 +1,7 @@
+apply from: "$projectDir/workflow/jobs.gradle"
+
+hadoop {
+    buildPath "build/azkaban"
+}
+
+clickstream_aggregates_job.each{ k, v -> hadoop.workflows.add(v) }

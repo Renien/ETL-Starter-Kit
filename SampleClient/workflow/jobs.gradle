@@ -1,0 +1,26 @@
+ext{
+    clickstream_aggregates_job = [:]
+}
+
+clickstream_aggregates_job = [
+        ClickStream: workflow('ClickStream') {
+            hadoopJavaJob('Aggregate') {
+                uses hadoopRunnerClass
+                baseProperties 'common'
+                set properties: [
+                        'main.args'   : [
+                                "com.sampleclient.jobs.ClickStreamAggregates",
+                                "-hdfs",
+                                "-tool.partialok",
+                                "-clickstreamInput rawInputDir",
+                                "-startDate 20170215",
+                                "-endDate 20170215",
+                                "-output outPutDir",
+                                "-trapDirectory trapsDir"
+                        ].join(" ")
+                ]
+            }
+
+            targets 'Aggregate'
+        }
+]
