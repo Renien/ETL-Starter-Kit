@@ -1,5 +1,6 @@
 include 'Common'
 include 'DataModel'
+include 'SampleClient'
 
 rootProject.children.each {
     it.name = rootProject.name.toLowerCase() + "-" + it.name.toLowerCase()
