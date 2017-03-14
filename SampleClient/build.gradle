@@ -3,8 +3,8 @@ apply from: "$projectDir/workflow/flow.gradle"
 
 dependencies {
     compile([
-            project(':etl-common'),
-            project(':etl-datamodel'),
+            project(':etl-starter-kit-common'),
+            project(':etl-starter-kit-datamodel'),
             libs.scalding_core
     ])
 
