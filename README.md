@@ -21,6 +21,33 @@
 
 Extract, Transform, Load (ETL) refers to a process in database usage and especially in data warehousing. This repository contains a starter kit featuring ETL related work.
 
+## Features and Limitations
+
+<img src="https://raw.githubusercontent.com/Renien/ETL/master/doc/blob/etl-lamda.jpg" alt="lamda-etl">
+
+**Lambda architecture** is a data-processing architecture designed to handle massive quantities of data by taking advantage of both batch- and stream-processing methods. 
+
+This starter kit package is mainly focusing on ETL related work where it allows to expand to an independent ETL framework for different client data sources. It contains basic implementation and project structure as follows,
+
+- **Common Module** – This will contain all the common jobs and helper classes for ETL framework. Currently two **Scalding** helper classes are implemented (Hadoop job runner and MapReduceConfig)
+
+- **DataModel Module** – This will contain all the BigData schema related code. For example, Avro, ORC, Thrift etc. Currently a sample Avro clickstream raw data shema has been implemented.
+
+- **SampleClient Module** – This will contain independent data processing jobs which will have dependency on Common and DataModel. 
+
+Since this repository is to keep only the structure; different type of sample jobs are not implemented. Based on your requirement be free to modify and implement different type of batch/streaming jobs (Spark, Hive, Pig etc)
+
+
+## Installation
+
+Make sure you have installed,
+
+- JDK 1.8+
+- Scala 2.10.*
+- Gradle 2.2+
+
+This started kit package uses the latest version of [**linkedin gradle Hadoop plugin**](https://github.com/linkedin/linkedin-gradle-plugin-for-apache-hadoop) which supports only gradle 2 series version. If anyone like to use the gradle older version then you have to downgrade linkedin gradle Hadoop plugin.
+
 ## Directory Layout
 
 ```
