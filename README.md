@@ -23,7 +23,9 @@ Extract, Transform, Load (ETL) refers to a process in database usage and especia
 
 ## Features and Limitations
 
-<img src="https://raw.githubusercontent.com/Renien/ETL/master/doc/blob/etl-lamda.jpg" alt="lamda-etl">
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Renien/ETL/master/doc/blob/etl-lamda.jpg" alt="lamda-etl">
+</p>
 
 **Lambda architecture** is a data-processing architecture designed to handle massive quantities of data by taking advantage of both batch- and stream-processing methods. 
 
