@@ -151,3 +151,6 @@ Upload _‘etl-starter-kit-sampleclient.zip’_ to Azkaban. After deploying the 
 -	[Hive](https://hive.apache.org/)
 -	[Apache Spark (Batch/Stream data processing)](http://spark.apache.org/)
 -	[Apache Flink (Batch/Stream data processing)](https://flink.apache.org/)
+
+## License
+MIT © [Renien](https://twitter.com/RenienJoseph)
