@@ -7,8 +7,8 @@
 </h1>
 
 <p align="center">
-       <a href="https://travis-ci.org/Renien/ETL">
-           <img src="https://travis-ci.org/Renien/ETL.svg?branch=master"
+       <a href="https://travis-ci.org/Renien/ETL-Starter-Kit">
+           <img src="https://travis-ci.org/Renien/ETL-Starter-Kit.svg?branch=master"
                 alt="Travis Build">
        </a>
        <a href="">
@@ -24,7 +24,7 @@ Extract, Transform, Load (ETL) refers to a process in database usage and especia
 ## Features and Limitations
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Renien/ETL/master/doc/blob/etl-lamda.jpg" alt="lamda-etl">
+    <img src="https://raw.githubusercontent.com/Renien/ETL-Starter-Kit/master/doc/blob/etl-lamda.jpg" alt="lamda-etl">
 </p>
 
 **Lambda architecture** is a data-processing architecture designed to handle massive quantities of data by taking advantage of both batch- and stream-processing methods. 
@@ -113,3 +113,41 @@ This started kit package uses the latest version of [**linkedin gradle Hadoop pl
 ├── settings.gradle                                               --> setting sub modules
 
 ```
+
+## Key Package Links
+
+This starter-kit is made based on few popular libraries with sample code. Based on your requirement choose the suitable technology.
+
+-	[Scalding](http://www.cascading.org/projects/scalding/)
+-	[ElephantBird](https://github.com/twitter/elephant-bird)
+-	[Avro – Data Schema](https://avro.apache.org/)
+
+## Using The Project
+
+>*Note*:
+>  This guide has only been tested on Mac OS X and may assume tools that are specific to it.
+>  If working in another OS substitutes may need to be used but should be available.
+
+### Step 1 – Build the Project:
+-	Run ```gradle clean build```
+
+Once you build the project you will find the following files:
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Renien/ETL-Starter-Kit/master/doc/blob/etl-build-files.jpg" alt="etl-build-files">
+</p>
+
+### Step 2 – Upload Azkaban Flow
+
+Upload _‘etl-starter-kit-sampleclient.zip’_ to Azkaban. After deploying the fat Hadoop jar you’re ready to run the flow.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Renien/ETL-Starter-Kit/master/doc/blob/sample-client-azkaban-flow.png" alt="sample-client-azkaban-flow">
+</p>
+
+## Notable Frameworks for ETL work:
+-	[Scalding](http://www.cascading.org/projects/scalding/)
+-	[Pig](https://pig.apache.org/)
+-	[Hive](https://hive.apache.org/)
+-	[Apache Spark (Batch/Stream data processing)](http://spark.apache.org/)
+-	[Apache Flink (Batch/Stream data processing)](https://flink.apache.org/)
